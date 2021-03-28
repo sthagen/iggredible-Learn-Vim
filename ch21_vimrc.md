@@ -1,6 +1,5 @@
 # Ch21. Vimrc
 
-In the previous chapters, you learned how to use Vim text editor. This is great, but not the whole thing. To use Vim more effectively, you will need to learn how to configure it. The best place to start is your vimrc. TBC
 In the previous chapters, you learned how to use Vim. In this chapter, you will learn how to orgnize and configure vimrc. 
 
 ## How Vim Finds Vimrc
@@ -193,9 +192,9 @@ let mapleader = "\<space>"
 ```
 
 The `nnoremap` command used above can be broken down into three parts:
-- `map` is the map command.
 - `n` represents the normal mode.
 - `nore` means non-recursive.
+- `map` is the map command.
 
 At minimum, you could have used `nmap` instead of `nnoremap` (`nmap <silent> <C-f> :Gfiles<CR>`). However, it is a good practice to use the non-recursive variant to avoid potential infinite loop.
 

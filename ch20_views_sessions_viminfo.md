@@ -83,7 +83,7 @@ You might wonder, "Where did Vim save this View file?" To see where Vim saves it
 :set viewdir?
 ```
 
-The default should say `~/.vim/view` (if you have a different OS, it might show a different path. Check out `:h viewdir` for more). If you want to change it to a different path, add this into your vimrc:
+In Unix based OS the default should say `~/.vim/view` (if you have a different OS, it might show a different path. Check out `:h viewdir` for more). If you are running a Unix based OS and want to change it to a different path, add this into your vimrc:
 
 ```
 set viewdir=$HOME/else/where
@@ -293,7 +293,7 @@ Session is a useful tool to preserve your project's external attributes. However
 
 ## Viminfo
 
-If you notice, after yanking a word into register a and quitting Vim, the next time you open Vim you still that text stored in the register. This is actually a work of Viminfo. Without it, Vim won't remember the register after you close Vim.
+If you notice, after yanking a word into register a and quitting Vim, the next time you open Vim you still that text stored in register a. This is actually a work of Viminfo. Without it, Vim won't remember the register after you close Vim.
 
 If you use Vim 8 or higher, Vim enables Viminfo by default, so you may have been using Viminfo this whole time without knowing it!
 
@@ -381,9 +381,9 @@ You will get:
 ```
 
 This looks cryptic. Let's break it down:
-- `!` saves global variables that start with an uppercase letter and don't contain lowercase letters. Recall that `g:` indicates a global variable. For example, if at some point you wrote the assignment `let g:FOO = "foo"`, Viminfo will save the global variable `FOO`. However if you did `let g:Foo = "foo"`, Viminfo will not save this global variable because it contains lowercase letters. Without `!`, Vim won't safe those global variables.
+- `!` saves global variables that start with an uppercase letter and don't contain lowercase letters. Recall that `g:` indicates a global variable. For example, if at some point you wrote the assignment `let g:FOO = "foo"`, Viminfo will save the global variable `FOO`. However if you did `let g:Foo = "foo"`, Viminfo will not save this global variable because it contains lowercase letters. Without `!`, Vim won't save those global variables.
 - `'100` represents marks. In this case, Viminfo will save the local marks (a-z) of the last 100 files. Be aware that if you tell Viminfo to save too many files, Vim can start slowing down. 1000 is a good number to have.
-- `<50` tells Viminfo how many maximum lines are saved for each registers (50 in this case). If I yank 100 lines of text into register a (`"ay99j`) and close Vim, the next time I open Vim and paste from register a (`"ap`), Vim will only paste 50 lines max. If you don't give maximum line number, *all* lines will be saved. If you give it 0, nothing will be saved.
+- `<50` tells Viminfo how many maximum lines are saved for each register (50 in this case). If I yank 100 lines of text into register a (`"ay99j`) and close Vim, the next time I open Vim and paste from register a (`"ap`), Vim will only paste 50 lines max. If you don't give maximum line number, *all* lines will be saved. If you give it 0, nothing will be saved.
 - `s10` sets a size limit (in kb) for a register. In this case, any register greater than 10kb size will be excluded.
 - `h` disables highlighting (from `hlsearch`) when Vim starts.
 
