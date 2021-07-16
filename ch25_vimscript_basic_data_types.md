@@ -285,7 +285,7 @@ On the other hand, this is falsy:
 
 Vim coerces "donuts12" into 0, because the first character is not a number.
 
-### Double vs Single quotes
+### Double vs Single Quotes
 
 Double quotes behave differently than single quotes. Single quotes display characters literally while double quotes accept special characters.
 
@@ -566,7 +566,7 @@ You can mutate multiple list items directly:
 :let favoriteFlavor = ["chocolate", "glazed", "plain"]
 :let favoriteFlavor[2:] = ["strawberry", "chocolate"]
 :echo favoriteFlavor
-returns ['chocolate', 'glazed', 'strawberry', 'chocolate']
+" returns ['chocolate', 'glazed', 'strawberry', 'chocolate']
 ```
 
 ## Dictionary
@@ -644,7 +644,7 @@ You can modify or even add a dictionary content:
 
 ### Dictionary Functions
 
-Let's explore some of Vim's built-in functions to handle Dictionaries.
+Let's explore some of Vim's built-in functions to handle dictionaries.
 
 To check the length of a dictionary, use `len()`.
 
@@ -655,7 +655,7 @@ To check the length of a dictionary, use `len()`.
 " returns 3
 ```
 
-To see if a dictionary contains a specific key, use `has_key()`
+To see if a dictionary contains a specific key, use `has_key()`.
 
 ```
 :let mealPlans = #{breakfast: "waffles", lunch: "pancakes", dinner: "donuts"}
@@ -709,7 +709,13 @@ To convert a dictionary into a list of lists, use `items()`:
 
 :echo breakfastNo
 " returns {'2': '9am', '11ses': '11am'}
+```
 
+Since a dictionary contains key-value pairs, Vim provides `v:key` special variable that works similar to `v:val`. When iterating through a dictionary, `v:key` will hold the value of the current iterated key. 
+
+If you have a `mealPlans` dictionary, you can map it using `v:key`.
+
+```
 :let mealPlans = #{breakfast: "waffles", lunch: "pancakes", dinner: "donuts"}
 :call map(mealPlans, 'v:key . " and milk"')
 
@@ -717,7 +723,15 @@ To convert a dictionary into a list of lists, use `items()`:
 " returns {'lunch': 'lunch and milk', 'breakfast': 'breakfast and milk', 'dinner': 'dinner and milk'}
 ```
 
-The `v:key` is Vim's special variable, much like `v:val`. When iterating through a dictionary, `v:key` will hold the value of the current iterated key.
+Similarly, you can map it using `v:val`:
+
+```
+:let mealPlans = #{breakfast: "waffles", lunch: "pancakes", dinner: "donuts"}
+:call map(mealPlans, 'v:val . " and milk"')
+
+:echo mealPlans
+" returns {'lunch': 'pancakes and milk', 'breakfast': 'waffles and milk', 'dinner': 'donuts and milk'}
+```
 
 To see more dictionary functions, check out `:h dict-functions`.
 
@@ -770,7 +784,7 @@ Similar to `v:none`.
 " returns {"test": null}
 ```
 
-## Learn Data Types The Smart Way
+## Learn Data Types the Smart Way
 
 In this chapter, you learned about Vimscript's basic data types: number, float, string, list, dictionary, and special. Learning these is the first step to start Vimscript programming.
 

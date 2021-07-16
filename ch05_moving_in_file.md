@@ -1,4 +1,4 @@
-# Ch05. Moving In A File
+# Ch05. Moving in a File
 
 In the beginning, moving with a keyboard feels slow and awkward but don't give up! Once you get used to it, you can go anywhere in a file faster than using a mouse.
 
@@ -97,7 +97,7 @@ $     Go to the last char in the current line
 n|    Go the column n in the current line
 ```
 
-You can do current line search with `f` and `t`. The difference between `f` and `t` is that `f` takes you to the first letter of the match and `t` takes you till (right before) the first letter of the match. So if you want to search for and land on "h", use `fh`. If you want to search for first "h" and land right before the match, use `th`. If you want to go to the *next* occurrence of the last current line search, use `;`. To go to the previous occurrence of the last current line match, use `,`.
+You can do current line search with `f` and `t`. The difference between `f` and `t` is that `f` takes you to the first letter of the match and `t` takes you till (right before) the first letter of the match. So if you want to search for "h" and land on "h", use `fh`. If you want to search for first "h" and land right before the match, use `th`. If you want to go to the *next* occurrence of the last current line search, use `;`. To go to the previous occurrence of the last current line match, use `,`.
 
 `F` and `T` are the backward counterparts of `f` and `t`. To search backwards for "h", run `Fh`. To keep searching for "h" in the same direction, use `;`. Note that `;` after a `Fh` searches backward and `,` after `fh` searches forward. 
 
@@ -118,7 +118,7 @@ const hello = "world";
 
 With your cursor at the start of the line, you can go to the last character in current line (";") with one keypress: `$`. If you want to go to "w" in "world", you can use `fw`. A good tip to go anywhere in a line is to look for least-common-letters like "j", "x", "z" near your target.
 
-## Sentence And Paragraph Navigation
+## Sentence and Paragraph Navigation
 
 Next two navigation units are sentence and paragraph.
 
@@ -241,8 +241,8 @@ Often you know that a phrase exists inside a file. You can use search navigation
 ```
 /    Search forward for a match
 ?    Search backward for a match
-n    Repeat last search (same direction of previous search)
-N    Repeat last search (opposite direction of previous search)
+n    Repeat last search in same direction of previous search
+N    Repeat last search in opposite direction of previous search
 ```
 
 Suppose you have this text:
@@ -286,7 +286,7 @@ ma    Mark position with mark "a"
 
 There is a difference between marking with lowercase letters (a-z) and uppercase letters (A-Z). Lowercase alphabets are local marks and uppercase alphabets are global marks (sometimes known as file marks).
 
-Let's talk about local marks. Each buffer can have its own set of local marks. If I have two files opened, I can set a mark "a" (`ma`)  in the first file and another mark "a" (`ma)` in the second file.
+Let's talk about local marks. Each buffer can have its own set of local marks. If I have two files opened, I can set a mark "a" (`ma`)  in the first file and another mark "a" (`ma`) in the second file.
 
 Unlike local marks where you can have a set of marks in each buffer, you only get one set of global marks. If you set `mA` inside `myFile.txt`, the next time you run `mA` in a different file, it will overwrite the first "A" mark. One advantage of global marks is you can jump to any global mark even if you are inside a completely different project. Global marks can travel across files.
 
@@ -338,7 +338,7 @@ For more, check out `:h jump-motions`.
 
 Why are jumps useful? Because you can navigate the jump list with `Ctrl-O` to move up the jump list and `Ctrl-I` to move down the jump list. You can jump across different files, which I will discuss more in the next part.
 
-## Learn Navigation The Smart Way
+## Learn Navigation the Smart Way
 
 If you are new to Vim, this is a lot to learn. I do not expect anyone to remember everything immediately. It takes time before you can execute them without thinking.
 

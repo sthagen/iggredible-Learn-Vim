@@ -32,7 +32,7 @@ The sixth, `$VIMRUNTIME/defaults.vim` is the default vimrc that comes with your 
 
 For the remaining of this chapter, I am assuming that the vimrc uses the `~/.vimrc` path. 
 
-## What To Put In My Vimrc?
+## What to Put in My Vimrc?
 
 A question I asked when I started was, "What should I put in my vimrc?"
 
@@ -185,7 +185,11 @@ nnoremap <Leader>tn :call ToggleNumber()<CR>
 
 On the first one, I map `Ctrl-F` to [fzf.vim](https://github.com/junegunn/fzf.vim) plugin's `:Gfiles` command (quickly search for Git files). On the second one, I map `<Leader>tn` to call a custom function `ToggleNumber` (toggles `norelativenumber` and `relativenumber` options). The `Ctrl-F` mapping overwrites Vim's native page scroll. Your mapping will overwrite Vim controls if they collide. Because I almost never used that feature, I decided that it is safe to overwrite it.
 
-By the way, I personally like to use `<Space>` as the leader key instead of Vim's default. To change your leader key, add this in your vimrc:
+By the way, what is this "leader" key in `<Leader>tn`?
+
+Vim has a leader key to help with mappings. For example, I mapped `<Leader>tn` to run the `ToggleNumber()` function. Without the leader key, I would be using `tn`, but Vim already has `t` (the "till" search navigation). With the leader key, I can now press the key assigned as a leader, then `tn` without interfering with existing commands. The leader key is a key that you can setup to start your mapping combo. By default Vim uses the backslash as the leader key (so `<Leader>tn` becomes "backslash-t-n").
+
+I personally like to use `<Space>` as the leader key instead of the backslash default. To change your leader key, add this in your vimrc:
 
 ```
 let mapleader = "\<space>"
@@ -365,7 +369,7 @@ Your vimrc should look like this:
 +-- 5 lines: mappings --------
 ```
 
-## Running Vim With Or Without Vimrc And Plugins
+## Running Vim With or Without Vimrc and Plugins
 
 If you need to run Vim without both vimrc and plugins, run:
 
@@ -391,6 +395,6 @@ If you need to run Vim with a *different* vimrc, say `~/.vimrc-backup`, run:
 vim -u ~/.vimrc-backup
 ```
 
-## Configure Vimrc The Smart Way
+## Configure Vimrc the Smart Way
 
 Vimrc is an important component of Vim customization. A good way to start building your vimrc is by reading other people's vimrcs and gradually build it over time. The best vimrc is not the one that developer X uses, but the one that is tailored exactly to fit your thinking framework and editing style.

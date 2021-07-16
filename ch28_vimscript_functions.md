@@ -48,7 +48,7 @@ To see all the built-in and custom functions in Vim, you can run `:function` com
 
 You can also search for functions with pattern with `:function /pattern`, similar to Vim's search navigation (`/pattern`). To search for all function containing the phrase "map", run `:function /map`. If you use external plugins, Vim will display the functions defined in those plugins.
 
-If you want to look at where a function originates, you can use the `:verbose` command with the `:function` command. To look at where all the functions containing teh word "map" are originated, run:
+If you want to look at where a function originates, you can use the `:verbose` command with the `:function` command. To look at where all the functions containing the word "map" are originated, run:
 
 ```
 :verbose function /map
@@ -61,9 +61,9 @@ function fzf#vim#maps(mode, ...)
         Last set from ~/.vim/plugged/fzf.vim/autoload/fzf/vim.vim line 1263
 ```
 
-## Removing A Function
+## Removing a Function
 
-To remove an existing function, use `:delfunction {function-name}`. To delete `Tasty`, run `:delfunction Tasty`.
+To remove an existing function, use `:delfunction {Function_name}`. To delete `Tasty`, run `:delfunction Tasty`.
 
 ## Function Return Value
 
@@ -162,7 +162,7 @@ echo Calories()
 " returns "I do not count my calories"
 ```
 
-## Calling A Function
+## Calling a Function
 
 Vim has a `:call` command to call a function.
 
@@ -227,7 +227,7 @@ function! Buffet(...)
 endfunction
 
 echo Buffet("Noodles", "Sushi")
-" Returns "Noodles Sushi"
+" returns "Noodles Sushi"
 ```
 
 The problem with this approach is if you now run `echo Buffet("Noodles")` (with only one variable), Vim complains that it has an undefined variable `a:2`. How can you make it flexible enough to display exactly what the user gives?
@@ -398,7 +398,7 @@ echo Breakfastify("pancake")
 " returns "I am having pancake for breakfast"
 ```
 
-In Vim, if you want to assign a function to a variable, you can't just run assign it directly like `let MyVar = MyFunc`. You need to use the `function()` function, like `let MyFar = function("MyFunc")`.
+In Vim, if you want to assign a function to a variable, you can't just run assign it directly like `let MyVar = MyFunc`. You need to use the `function()` function, like `let MyVar = function("MyFunc")`.
 
 You can use funcref with maps and filters. Note that maps and filters will pass an index as the first argument and the iterated value as the second argument.
 
@@ -519,10 +519,8 @@ endfunction
 
 Now if you run `echo Lunch()()`, Vim will return "shrimp".
 
-## Learn Vimscript Functions The Smart Way
+## Learn Vimscript Functions the Smart Way
 
 In this chapter, you learned the anatomy of Vim function. You learned how to use different special keywords `range`, `dict`, and `closure` to modify function behavior. You also learned how to use lambda and to chain multiple functions together. Functions are important tools for creating complex abstractions.
 
-This concludes this Vim guide. However, your Vim journey doesn't end here. In fact, it actually starts now. You should have sufficient knowledge to go on your own. You may even create your own plugins. Learning Vim is a lifelong pursuit, so never stop learning!
-
-Happy Vimming, friends!
+Next, let's put everything that you have learned together to make your own plugin.
