@@ -16,7 +16,7 @@ A    Append text at the end of line
 o    Starts a new line below the cursor and insert text
 O    Starts a new line above the cursor and insert text
 s    Delete the character under the cursor and insert text
-S    Delete the current line and insert text
+S    Delete the current line and insert text, synonym for "cc"
 gi   Insert text in same position where the last insert mode was stopped
 gI   Insert text at the start of line (column 1)
 ```
@@ -57,9 +57,9 @@ If you type "hello world!" and exit insert mode, Vim will repeat the text 10 tim
 When you make a typing mistake, it can be cumbersome to type `<Backspace>` repeatedly. It may make more sense to go to normal mode and delete your mistake. You can also delete several characters at a time while in insert mode.
 
 ```
-Ctrl-H    Delete one character
-Ctrl-W    Delete one word
-Ctrl-U    Delete the entire line
+Ctrl-h    Delete one character
+Ctrl-w    Delete one word
+Ctrl-u    Delete the entire line
 ```
 
 ## Insert From Register
@@ -156,6 +156,6 @@ Ctrl-O D      Delete from current location to the end of the line
 
 ## Learn Insert Mode the Smart Way
 
-If you are like me and you come from another text editor, it can be tempting to stay in insert mode. However, staying in insert mode when you're not entering a text is an anti-pattern. Develop a habit to go to normal mode when your fingers aren't typing new texts.
+If you are like me and you come from another text editor, it can be tempting to stay in insert mode. However, staying in insert mode when you're not entering a text is an anti-pattern. Develop a habit to go to normal mode when your fingers aren't typing new text.
 
 When you need to insert a text, first ask yourself if that text already exists. If it does, try to yank or move that text instead of typing it. If you have to use insert mode, see if you can autocomplete that text whenever possible. Avoid typing the same word more than once if you can.

@@ -13,6 +13,8 @@ h   Left
 j   Down
 k   Up
 l   Right
+gj  Down in a soft-wrapped line
+gk  Up in a soft-wrapped line
 ```
 
 You can also move with directional arrows. If you are just starting, feel free to use any method you're most comfortable with.
@@ -73,7 +75,7 @@ ge    Move backward to end of the previous word
 gE    Move backward to end of the previous WORD
 ```
 
-So what are the similarities and differences between a word and a WORD? Both word and WORD are separated by non-blank characters. A word is a sequence of characters containing *only* `a-zA-Z0-9_`. A WORD is a sequence of all characters except white space (a white space means either space, tab, and EOL). To learn more, check out `:h word` and `:h WORD`.
+So what are the similarities and differences between a word and a WORD? Both word and WORD are separated by blank characters. A word is a sequence of characters containing *only* `a-zA-Z0-9_`. A WORD is a sequence of all characters except white space (a white space means either space, tab, and EOL). To learn more, check out `:h word` and `:h WORD`.
 
 For example, suppose you have:
 
@@ -257,7 +259,7 @@ let onetwo = 12;
 
 If you are searching for "let", run `/let`. To quickly search for "let" again, you can just do `n`. To search for "let" again in opposite direction, run `N`. If you run `?let`, it will search for "let" backwards. If you use `n`, it will now search for "let" backwards (`N` will search for "let" forwards now).
 
-You can enable search highlight with `set hlsearch`. Now when you search for `/let`, it will highlight *all* matching phrases in the file. In addition, you can set incremental search with `set incsearch`. This will highlight the pattern while typing. By default, your matching phrases will remain highlighted until you search for another phrase. This can quickly turn into an annoyance. To disable highlight, you can run `:nohlsearch`. Because I use this no-highlight feature frequently, I created a map in vimrc:
+You can enable search highlight with `set hlsearch`. Now when you search for `/let`, it will highlight *all* matching phrases in the file. In addition, you can set incremental search with `set incsearch`. This will highlight the pattern while typing. By default, your matching phrases will remain highlighted until you search for another phrase. This can quickly turn into an annoyance. To disable highlight, you can run `:nohlsearch` or simply `:noh`. Because I use this no-highlight feature frequently, I created a map in vimrc:
 
 ```
 nnoremap <esc><esc> :noh<return><esc>
@@ -336,16 +338,16 @@ I don't recommend memorizing this list. A good rule of thumb is, any motion that
 
 For more, check out `:h jump-motions`.
 
-Why are jumps useful? Because you can navigate the jump list with `Ctrl-O` to move up the jump list and `Ctrl-I` to move down the jump list. You can jump across different files, which I will discuss more in the next part.
+Why are jumps useful? Because you can navigate the jump list with `Ctrl-O` to move up the jump list and `Ctrl-I` to move down the jump list. `hjkl` are not "jump" commands, but you can manually add the current location to jump list with `m'` before movement. For example, `m'5j` adds current location to jump list and goes down 5 lines, and you can come back with `Ctrl-O`. You can jump across different files, which I will discuss more in the next part.
 
 ## Learn Navigation the Smart Way
 
 If you are new to Vim, this is a lot to learn. I do not expect anyone to remember everything immediately. It takes time before you can execute them without thinking.
 
-I think the best way to get started is to memorize a few essential motions. I recommend starting out with these 10 motions: `h, j, k, l, w, b, G, /, ?, n`. Repeat them sufficiantly until you can use them without thinking.
+I think the best way to get started is to memorize a few essential motions. I recommend starting out with these 10 motions: `h, j, k, l, w, b, G, /, ?, n`. Repeat them sufficiently until you can use them without thinking.
 
 To improve your navigation skill, here are my suggestions:
-1. Watch for repeated actions. If you find yourself doing `l` repeatedly, look for a motion that will take you forward faster. You will find that you can use `w`. If you catch yourself repeatedly doing `w`, look if there is a motion that will take you across the current line quickly. You will find that you can use the `f`. If you can describe your need succintly, there is a good chance Vim has a way to do it.
+1. Watch for repeated actions. If you find yourself doing `l` repeatedly, look for a motion that will take you forward faster. You will find that you can use `w`. If you catch yourself repeatedly doing `w`, look if there is a motion that will take you across the current line quickly. You will find that you can use the `f`. If you can describe your need succinctly, there is a good chance Vim has a way to do it.
 2. Whenever you learn a new move, spend some time until you can do it without thinking.
 
 Finally, realize that you do not need to know every single Vim command to be productive. Most Vim users don't. I don't. Learn the commands that will help you accomplish your task at that moment.

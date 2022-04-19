@@ -1,4 +1,4 @@
-# Ch27. Vimscript Functions
+# Ch28. Vimscript Functions
 
 Functions are means of abstraction, the third element in learning a new language.
 
@@ -201,10 +201,10 @@ function! Breakfast(meal, beverage = "Milk")
 endfunction
 
 echo Breakfast("Hash Browns")
-" returns hash browns and milk
+" returns I had hash browns and milk for breakfast
 
 echo Breakfast("Cereal", "Orange Juice")
-" returns Cereal and Orange Juice
+" returns I had Cereal and Orange Juice for breakfast
 ```
 
 ## Variable Arguments
@@ -232,7 +232,7 @@ echo Buffet("Noodles", "Sushi")
 
 The problem with this approach is if you now run `echo Buffet("Noodles")` (with only one variable), Vim complains that it has an undefined variable `a:2`. How can you make it flexible enough to display exactly what the user gives?
 
-Luckily, Vim has a special variable `a:0` to display the *length* of the argument passed into `...`.
+Luckily, Vim has a special variable `a:0` to display the *number* of the arguments passed into `...`.
 
 ```
 function! Buffet(...)

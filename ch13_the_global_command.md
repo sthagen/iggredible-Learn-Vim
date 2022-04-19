@@ -192,7 +192,7 @@ console.log("three: ", three);
 Notice that the lines with "const" do not have semi-colons. Let's create a macro to add a comma to the end of those lines in the register a:
 
 ```
-qa0A;<Esc>q
+qaA;<Esc>q
 ```
 
 If you need a refresher, check out the chapter on macro. Now run:
@@ -387,7 +387,7 @@ console.log("three: ", three);
 Recall from the register chapter that deleted texts are stored inside the numbered registers (granted they are sufficiently large ). Whenever you run `:g/console/d`, Vim stores the deleted lines in the numbered registers. If you delete many lines, you can quickly fill up all the numbered registers. To avoid this, you can always use the black hole register (`"_`) to *not* store your deleted lines into the registers. Run:
 
 ```
-:g/console/d _
+:g/console/d_
 ```
 
 By passing `_` after `d`, Vim won't use up your scratch registers.
@@ -535,7 +535,7 @@ const arrayA = [
 
 This is great! But the command looks complicated. Let's break it down. This command also follows the form `:g/pattern1/,/pattern2/command`.
 
-- `:g/\[/` is the global command pattern.
+- `:g` is the global command pattern.
 - `/\[/+1` is the first pattern. It matches a literal left square bracket "[". The `+1` refers to the line below it.
 - `/\]/-1` is the second pattern. It matches a literal right square bracket "]". The `-1` refers to the line above it.
 - `/\[/+1,/\]/-1` then refers to any lines between "[" and "]".

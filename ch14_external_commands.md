@@ -30,7 +30,7 @@ The syntax to read the STDOUT of an external command into the current buffer is:
 
 Vim will put the content of `file1.txt` into the current buffer.
 
-If you run the `:r` command followed by a `!` and an external command, the output of that commmand will be inserted into the current buffer. To get the result of the `ls` command, run:
+If you run the `:r` command followed by a `!` and an external command, the output of that command will be inserted into the current buffer. To get the result of the `ls` command, run:
 
 ```
 :r !ls
@@ -137,7 +137,7 @@ hello vim
 
 The breakdown:
 - `.!` executes the filter command on the current line.
-- `!tr '[:lower:]' '[:upper:]'` calls the `tr` command to replace all lowercase characters with uppercase ones.
+- `tr '[:lower:]' '[:upper:]'` calls the `tr` command to replace all lowercase characters with uppercase ones.
 
 It is imperative to pass a range to run the external command as a filter. If you try running the command above without the `.` (`:!tr '[:lower:]' '[:upper:]'`), you will see an error.
 
