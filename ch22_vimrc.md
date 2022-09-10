@@ -259,6 +259,8 @@ source $HOME/.vim/settings/functions.vim
 source $HOME/.vim/settings/mappings.vim
 ```
 
+You can edit these files by putting your cursor under the path and press `gf`.
+
 Inside `~/.vim/settings/plugins.vim`:
 
 ```
@@ -393,6 +395,12 @@ If you need to run Vim with a *different* vimrc, say `~/.vimrc-backup`, run:
 
 ```
 vim -u ~/.vimrc-backup
+```
+
+If you need to run Vim with only `defaults.vim` and without plugins, which is helpful to fix broken vimrc, run:
+
+```
+vim --clean
 ```
 
 ## Configure Vimrc the Smart Way
