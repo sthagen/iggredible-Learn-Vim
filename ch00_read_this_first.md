@@ -65,13 +65,13 @@ Vim commands can be abbreviated. For example, `:join` can be abbreviated as `:j`
 
 At various points in the guide, I will refer to vimrc options. If you're new to Vim, a vimrc is like a config file.
 
-Vimrc won't be covered until chapter 21. For the sake of clarity, I will show briefly here how to set it up.
+Vimrc won't be covered until chapter 22. For the sake of clarity, I will show briefly here how to set it up.
 
 Suppose you need to set the number options (`set number`). If you don't have a vimrc already, create one. It is usually placed in your home directory and named `.vimrc`. Depending on your OS, the location may differ. In macOS, I have it on `~/.vimrc`. To see where you should put yours, check out `:h vimrc`.
 
 Inside it, add `set number`. Save it (`:w`), then source it (`:source %`). You should now see line numbers displayed on the left side.
 
-Alternatively, if you don't want to a make permanent setting change, you can always run the `set` command inline, by running `:set number`. The downside of this approach is that this setting is temporary. When you close Vim, the option disappears.
+Alternatively, if you don't want to make a permanent setting change, you can always run the `set` command inline, by running `:set number`. The downside of this approach is that this setting is temporary. When you close Vim, the option disappears.
 
 Since we are learning about Vim and not Vi, a setting that you must have is the `nocompatible` option. Add `set nocompatible` in your vimrc. Many Vim-specific features are disabled when it is running on `compatible` option.
 
@@ -89,7 +89,10 @@ To learn more about Vim, please follow [@learnvim](https://twitter.com/learnvim)
 
 ## Thank Yous
 
-This guide wouldn't be possible without Bram Moleenar for creating Vim, my wife who had been very patient and supportive throughout the journey, all the [contributors](https://github.com/iggredible/Learn-Vim/graphs/contributors) of the learn-vim project, the Vim community, and many, many others that weren't mentioned.
+This guide wouldn't be possible without Bram Molenaar for creating Vim, my wife who had been very patient and supportive throughout the journey, all the [contributors](https://github.com/iggredible/Learn-Vim/graphs/contributors) of the learn-vim project, the Vim community, and many, many others that weren't mentioned.
 
 Thank you. You all help make text editing fun :)
 
+
+## Link
+- Next [Ch01. Starting Vim](./ch01_starting_vim.md)

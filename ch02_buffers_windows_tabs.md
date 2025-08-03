@@ -88,10 +88,10 @@ Now you are looking at two buffers through **two windows**. The top window displ
 If you want to navigate between windows, use these shortcuts:
 
 ```
-Ctrl-W H    Moves the cursor to the left window
-Ctrl-W J    Moves the cursor to the window below
-Ctrl-W K    Moves the cursor to the window upper
-Ctrl-W L    Moves the cursor to the right window
+Ctrl-W h    Moves the cursor to the left window
+Ctrl-W j    Moves the cursor to the window below
+Ctrl-W k    Moves the cursor to the window upper
+Ctrl-W l    Moves the cursor to the right window
 ```
 
 Now run:
@@ -188,3 +188,7 @@ Everyone has a different workflow, here is mine for example:
 - Instead of tabs, I use [tmux](https://github.com/tmux/tmux/wiki) windows. I usually use multiple tmux windows at once. For example, one tmux window for client-side codes and another for backend codes.
 
 My workflow may look different from yours based on your editing style and that's fine. Experiment around to discover your own flow, suiting your coding style.
+
+## Link
+- Prev [Ch01. Starting Vim](./ch01_starting_vim.md)
+- Next [Ch03. Searching Files](./ch03_searching_files.md)

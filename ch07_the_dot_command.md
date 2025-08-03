@@ -94,6 +94,8 @@ Let's remove all the z's. Starting from the first character on the first line, v
 
 When you deleted a column of three z's (`Ctrl-vjjd`), it was counted as a change. Visual mode operation can be used to target multiple lines as part of a change.
 
+If `Crtl-V` doesn't switch the window to VISUAL BLOCK mode, you can try (`Ctrl-Q`), read more at: [Ctrl-V don't work in WLS](https://vi.stackexchange.com/questions/12227/vim-v-visual-block-mode-not-working).
+
 ## Including a Motion in a Change
 
 Let's revisit the first example in this chapter. Recall that the command `/letcwconst<Esc>` followed by `n . n .`  replaced all "let" with "const" in the following expressions:
@@ -117,3 +119,7 @@ The dot command's power comes from exchanging several keystrokes for one. It is 
 When editing, think about repeatability. For example, if I need to remove the next three words, is it more economical to use `d3w` or to do `dw` then `.` two times? Will you be deleting a word again? If so, then it makes sense to use `dw` and repeat it several times instead of `d3w` because `dw` is more reusable than `d3w`. 
 
 The dot command is a versatile command for automating single changes. In a later chapter, you will learn how to automate more complex actions with Vim macros. But first, let's learn about registers to store and retrieve text.
+
+## Link
+- Prev [Ch06. Insert Mode](./ch06_insert_mode.md)
+- Next [Ch08. Registers](./ch08_registers.md)

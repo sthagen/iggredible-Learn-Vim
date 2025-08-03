@@ -146,7 +146,7 @@ Here is the breakdown of the steps:
 
 Now you can just run `@a` and watch Vim execute the macro recursively.
 
-How did the macro know when to stop? When the macro was on the last line, it triedto run `j`, since there was no more line to go to, it stopped the macro execution.
+How did the macro know when to stop? When the macro was on the last line, it tried to run `j`, since there was no more line to go to, it stopped the macro execution.
 
 ## Appending a Macro
 
@@ -267,3 +267,7 @@ In the beginning, I find it very awkward to write macros, but don't give up. Wit
 You might find it helpful to use mnemonics to help remember your macros. If you have a macro that creates a function, use the "f register (`qf`). If you have a macro for numerical operations, the "n register should work (`qn`). Name it with the *first named register* that comes to your mind when you think of that operation. I also find that the "q register makes a good default macro register because `qq` requires less brain power to come up with. Lastly, I also like to increment my macros in alphabetical orders, like `qa`, then `qb`, then `qc`, and so on.
 
 Find a method that works best for you.
+
+## Link
+- Prev [Ch08. Registers](./ch08_registers.md)
+- Next [Ch10. Undo](./ch10_undo.md)
