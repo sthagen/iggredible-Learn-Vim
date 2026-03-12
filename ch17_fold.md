@@ -93,7 +93,7 @@ With indent fold, Vim looks at how many spaces each line has at the beginning an
 
 Vim's default `'shiftwidth'` value is 2. On the text above, there are two spaces between the start of the line and the text "Two" and "Two again". When Vim sees the number of spaces and that the `'shiftwidth'` value is 2, Vim considers that line to have an indent fold level of one.
 
-Suppose this time you only one space between the start of the line and the text:
+Suppose this time you have only one space between the start of the line and the text:
 
 ```
 One
@@ -312,7 +312,7 @@ Now Vim uses `coffee1` and `coffee2` as the new folding markers. As a side note,
 
 ## Persisting Fold
 
-You loses all fold information when you close the Vim session. If you have this file, `count.txt`:
+You lose all fold information when you close the Vim session. If you have this file, `count.txt`:
 
 ```
 one

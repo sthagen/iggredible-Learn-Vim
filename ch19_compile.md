@@ -107,7 +107,7 @@ The default `:make` command is the `make` external command. To change the `:make
 :set makeprg=g++\ %
 ```
 
-The `\` is to escape the space after `g++`. The `%` symbol in Vim represents the current file. The command `g++\\ %` is equivalent to running `g++ hello.cpp`.
+The `\` is to escape the space after `g++`. The `%` symbol in Vim represents the current file. The command `g++\ %` is equivalent to running `g++ hello.cpp`.
 
 Go to `./hello.cpp` then run `:make`. Vim compiles `hello.cpp` and creates `a.out` because you didn't specify the output. Let's refactor it so it will name the compiled output with the name of the original file minus the extension. Run or add this to vimrc:
 
@@ -228,7 +228,7 @@ Recall that `%` means the current file. Watch your Typescript compiler work as e
 
 ## Async Compiler
 
-Sometimes compiling can take a long time. You don't want to be staring at a frozen Vim while waiting for your compilation process to finish. Wouldn't it be nice if you can compile asynchronously so you can still use Vim during compilation?
+Sometimes compiling can take a long time. You don't want to be staring at a frozen Vim while waiting for your compilation process to finish. Wouldn't it be nice if you could compile asynchronously so you can still use Vim during compilation?
 
 Luckily there are plugins to run async processes. The two big ones are:
 

@@ -11,7 +11,7 @@ one = One.new
 one.donut
 ```
 
-`One`? `donut`? Well, these might have been obvious to the developers writing the code way back then, but now those developers are no longer here and it is up to you to understand these obscure codes. One way to help understand this is to follow the source code where `One` and `donut` are defined.
+`One`? `donut`? Well, these might have been obvious to the developers writing the code way back then, but now those developers are no longer here and it is up to you to understand this obscure code. One way to help understand this is to follow the source code where `One` and `donut` are defined.
 
 You can search for them with either `fzf` or `grep` (or `vimgrep`), but in this case, tags are faster.
 
@@ -168,7 +168,7 @@ The point is, if you want to omit a directory, `--exclude` is your best friend.
 
 ## Tags Navigation
 
-You can get good mileage using only `Ctrl-]`, but let's learn a few more tricks. The tag jump key `Ctrl-]` has an command-line mode alternative: `:tag {tag-name}`. If you run:
+You can get good mileage using only `Ctrl-]`, but let's learn a few more tricks. The tag jump key `Ctrl-]` has a command-line mode alternative: `:tag {tag-name}`. If you run:
 
 ```
 :tag donut
@@ -230,7 +230,7 @@ Not all tags are equal. Some tags have higher priorities. If Vim is presented wi
 4. A fully matched static tag in another file.
 5. A case-insensitively matched static tag in the current file.
 6. A case-insensitively matched global tag in the current file.
-7. A case-insensitively matched global tag in the a different file.
+7. A case-insensitively matched global tag in a different file.
 8. A case-insensitively matched static tag in the current file.
 
 According to the priority list, Vim prioritizes the exact match found on the same file. That's why Vim chooses the `pancake` procedure inside `two.rb` over the `pancake` procedure inside `one.rb`. There are some exceptions to the priority list above depending on your `'tagcase'`, `'ignorecase'`, and `'smartcase'` settings, but I will not discuss them here. If you are interested, check out `:h tag-priority`.
@@ -256,7 +256,7 @@ You will see, on the bottom of the screen:
 
 If you type 2, Vim will jump to the procedure in `one.rb`. If you type 1, Vim will jump to the procedure in `two.rb`.
 
-Pay attention to the `pri` column. You have `F C` on the first match and `F` on the second match. This is what Vim uses to determine the tag priotity. `F C` means a fully-matched (`F`) global tag in the current (`C`) file. `F` means only a fully-matched (`F`) global tag. `F C` always have a higher priority than `F`.
+Pay attention to the `pri` column. You have `F C` on the first match and `F` on the second match. This is what Vim uses to determine the tag priority. `F C` means a fully-matched (`F`) global tag in the current (`C`) file. `F` means only a fully-matched (`F`) global tag. `F C` always have a higher priority than `F`.
 
 If you run `:tselect donut`, Vim also prompts you to select which tag item to jump to, even though there is only one option to choose from. Is there a way for Vim to prompt the tag list only if there are multiple matches and to jump immediately if there is only one tag found?
 

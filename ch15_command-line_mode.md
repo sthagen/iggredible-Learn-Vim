@@ -15,7 +15,7 @@ There are 4 different commands you can use to enter the command-line mode:
 
 You can enter the command-line mode from the normal mode or the visual mode.
 
-To leave the command-line mode, you can use `<Esc>`, `Ctrl-C, or Ctrl-[`.
+To leave the command-line mode, you can use `<Esc>`, `Ctrl-C`, or `Ctrl-[`.
 
 *Other literatures might refer the "Command-line command" as "Ex command" and the "External command" as "filter command" or "bang operator".*
 
@@ -69,7 +69,7 @@ To open the command-line history, run `:his :`. You should see something like th
 
 Vim lists the history of all the `:` commands you run. By default, Vim stores the last 50 commands. To change the amount of the entries that Vim remembers to 100, you run `set history=100`.
 
-A more useful use of the command-line history is through the command-line window,`q:`. This will open a searchable, editable history window. Suppose you have these expressions in the history when you press `q:`:
+A more useful use of the command-line history is through the command-line window, `q:`. This will open a searchable, editable history window. Suppose you have these expressions in the history when you press `q:`:
 
 ```
 51  s/verylongsubstitutionpattern/pancake/g
@@ -87,7 +87,7 @@ To quit this window, press `Ctrl-C`, `Ctrl-W C`, or type `:quit`.
 
 ## More Command-line Commands
 
-Vim has hundreds of built-in commands. To see all the commands Vim have, check out `:h ex-cmd-index` or `:h :index`.
+Vim has hundreds of built-in commands. To see all the commands Vim has, check out `:h ex-cmd-index` or `:h :index`.
 
 ## Learn Command-line Mode the Smart Way
 

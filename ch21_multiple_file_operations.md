@@ -1,4 +1,4 @@
-# Multiple File Operations
+# Ch21. Multiple File Operations
 
 Being able to update in multiple files is another useful editing tool to have. Earlier you learned how to update multiple texts with `cfdo`. In this chapter, you will learn the different ways you can edit multiple files in Vim.
 
@@ -82,7 +82,7 @@ Once you have the list, you can pass it with any command-line commands of your c
 
 Once you're done, don't forget to save them with `:update`.
 
-Sometimes you need to run the commands only on the first n items of the argument list. If that's the case, just pass to the `argdo` command an address. For example, to run the substitute command  only on the first 3 items from the list, run `:1,3argdo %s/donut/pancake/g`.
+Sometimes you need to run the commands only on the first n items of the argument list. If that's the case, just pass to the `argdo` command an address. For example, to run the substitute command only on the first 3 items from the list, run `:1,3argdo %s/donut/pancake/g`.
 
 ## Buffer List
 
@@ -156,7 +156,7 @@ When deciding whether to use `cfdo` or `cdo`, think of the command scope that yo
 
 ## Location List
 
-Location list is similar to quickfix list in a sense that Vim also uses a special window to display messages. The difference between a quickfix list and a location list is that at any time, you may only have one quickfix list, whereas you can have as many location list as windows.
+Location list is similar to quickfix list in a sense that Vim also uses a special window to display messages. The difference between a quickfix list and a location list is that at any time, you may only have one quickfix list, whereas you can have as many location lists as windows.
 
 Suppose that you have two windows opened, one window displaying `food.txt` and another displaying `drinks.txt`. From inside `food.txt`, you run a location-list search command `:lvimgrep` (the location variant for the `:vimgrep` command):
 

@@ -8,6 +8,16 @@ There are many places to learn Vim: the `vimtutor` is a great place to start and
 
 This guide is written for both beginner and advanced Vimmers. It starts out with broad and simple concepts and ends with specific and advanced concepts. If you're an advanced user already, I encourage you to read this guide from start to finish anyway, because you may learn something new!
 
+## Read Locally (with Docker)
+
+You can read this book locally with Docker. Just run:
+
+```bash
+docker compose -f book/docker-compose.yml up --build
+```
+
+Then open [http://localhost:8080](http://localhost:8080).
+
 ## I Want More Vim Tips!
 
 Follow [@learnvim](https://twitter.com/learnvim) for updates, Vim tips, etc.

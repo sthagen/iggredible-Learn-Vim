@@ -1,4 +1,4 @@
-# Ch13. the Global Command
+# Ch13. The Global Command
 
 So far you have learned how to repeat the last change with the dot command (`.`), to replay actions with macros (`q`), and to store texts in the registers (`"`).
 
@@ -8,7 +8,7 @@ In this chapter, you will learn how to repeat a command-line command with the gl
 
 Vim's global command is used to run a command-line command on multiple lines simultaneously.
 
-By the way, you may have heard of the term "Ex Commands" before. In this guide, I refer them as command-line commands. Both Ex commands and command-line commands are the same. They are the commands that start with a colon (`:`). The substitute command in the last chapter was an example of an Ex command. They are called Ex because they originally came from the Ex text editor. I will continue to refer to them as command-line commands in this guide. For a full list of Ex commands, check out `:h ex-cmd-index`.
+By the way, you may have heard of the term "Ex Commands" before. In this guide, I refer to them as command-line commands. Both Ex commands and command-line commands are the same. They are the commands that start with a colon (`:`). The substitute command in the last chapter was an example of an Ex command. They are called Ex because they originally came from the Ex text editor. I will continue to refer to them as command-line commands in this guide. For a full list of Ex commands, check out `:h ex-cmd-index`.
 
 The global command has the following syntax:
 
@@ -549,7 +549,7 @@ Some of the examples here are complicated. Do not be intimidated. Really take yo
 
 Whenever you need to run multiple commands, pause and see if you can use the `g` command. Identify the best command for the job and write a pattern to target as many things at once.
 
-Now that you know how powerful the global command is, let's learn how to use the external commands to increase your tool arsenals.
+Now that you know how powerful the global command is, let's learn how to use the external commands to increase your tool arsenal.
 
 ## Link
 - Prev [Ch12. Search and Substitute](./ch12_search_and_substitute.md)

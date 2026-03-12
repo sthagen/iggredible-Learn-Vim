@@ -1,4 +1,4 @@
-# Ch07. the Dot Command
+# Ch07. The Dot Command
 
 In general, you should try to avoid redoing what you just did whenever possible. In this chapter, you will learn how to use the dot command to easily redo the previous change. It is a versatile command for reducing simple repetitions.
 
@@ -26,7 +26,7 @@ Here the dot command repeated the `cwconst<Esc>` sequence. It saved you from typ
 
 If you look at the definition of the dot command (`:h .`), it says that the dot command repeats the last change. What is a change?
 
-Any time you update (add, modify, or delete) the content of the current buffer, you are making a change. The exceptions are updates done by command-line commands (the commands starting with `:`) do not count as a change.
+Any time you update (add, modify, or delete) the content of the current buffer, you are making a change. The exceptions are updates done by command-line commands (the commands starting with `:`), which do not count as a change.
 
 In the first example, `cwconst<Esc>` was the change. Now suppose you have this text:
 
@@ -34,7 +34,7 @@ In the first example, `cwconst<Esc>` was the change. Now suppose you have this t
 pancake, potatoes, fruit-juice,
 ```
 
-To delete the text from the start of the line to the next occurrence of a comma, first delete to the comma, then repeat twice it with `df,..`. 
+To delete the text from the start of the line to the next occurrence of a comma, first delete to the comma, then repeat it twice with `df,..`. 
 
 Let's try another example:
 
@@ -94,7 +94,7 @@ Let's remove all the z's. Starting from the first character on the first line, v
 
 When you deleted a column of three z's (`Ctrl-vjjd`), it was counted as a change. Visual mode operation can be used to target multiple lines as part of a change.
 
-If `Crtl-V` doesn't switch the window to VISUAL BLOCK mode, you can try (`Ctrl-Q`), read more at: [Ctrl-V don't work in WLS](https://vi.stackexchange.com/questions/12227/vim-v-visual-block-mode-not-working).
+If `Ctrl-V` doesn't switch the window to VISUAL BLOCK mode, you can try (`Ctrl-Q`), read more at: [Ctrl-V don't work in WLS](https://vi.stackexchange.com/questions/12227/vim-v-visual-block-mode-not-working).
 
 ## Including a Motion in a Change
 

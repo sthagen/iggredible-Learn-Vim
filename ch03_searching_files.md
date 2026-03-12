@@ -99,7 +99,7 @@ You need to add the `app/controllers/` to the current `path`. Here is how you ca
 
 Now that your path is updated, when you type `:find u<Tab>`, Vim will now search inside `app/controllers/` directory for files starting with "u".
 
-If you have a nested `controllers/` directory, like `app/controllers/account/users_controller.rb`, Vim won't find `users_controllers`. Instead, you need to add  `:set path+=app/controllers/**`  in order for autocompletion will find `users_controller.rb`. This is great! Now you can find the users controller with 1 press of tab instead of 3.
+If you have a nested `controllers/` directory, like `app/controllers/account/users_controller.rb`, Vim won't find `users_controllers`. Instead, you need to add  `:set path+=app/controllers/**`  in order for autocompletion to find `users_controller.rb`. This is great! Now you can find the users controller with 1 press of tab instead of 3.
 
 You might be thinking to add the entire project directories so when you press `tab`, Vim will search everywhere for that file, like this:
 
@@ -212,7 +212,7 @@ One thing that modern text editors get right and that Vim didn't is how easy it 
 
 ## Setup
 
-First, make sure you have [fzf](https://github.com/junegunn/fzf) and [ripgrep](https://github.com/BurntSushi/ripgrep) downloaded. Follow the instruction on their github repo. The commands `fzf` and `rg` should now be available after successful installs.
+First, make sure you have [fzf](https://github.com/junegunn/fzf) and [ripgrep](https://github.com/BurntSushi/ripgrep) downloaded. Follow the instructions on their GitHub repo. The commands `fzf` and `rg` should now be available after successful installs.
 
 Ripgrep is a search tool much like grep (hence the name). It is generally faster than grep and has many useful features. Fzf is a general-purpose command-line fuzzy finder. You can use it with any commands, including ripgrep. Together, they make a powerful search tool combination.
 
@@ -315,7 +315,7 @@ That is a very good question. You may need to use `:grep` in Vim to do search an
 
 ## Search and Replace in Multiple Files
 
-Modern text editors like VSCode makes it very easy to search and replace a string across multiple files. In this section, I will show you two different methods to easily do that in Vim.
+Modern text editors like VSCode make it very easy to search and replace a string across multiple files. In this section, I will show you two different methods to easily do that in Vim.
 
 The first method is to replace *all* matching phrases in your project. You will need to use `:grep`. If you want to replace all instances of "pizza" with "donut", here's what you do:
 
@@ -342,7 +342,7 @@ Searching is the bread-and-butter of text editing. Learning how to search well i
 
 Fzf.vim is a game-changer. I can't imagine using Vim without it. I think it is very important to have a good search tool when starting Vim. I've seen people struggling to transition to Vim because it seems to be missing critical features modern text editors have, like an easy and powerful search feature. I hope this chapter will help you to make the transition to Vim easier. 
 
-You also just saw Vim's extensibility in action - the ability to extend search functionality with a plugin and an external program. In the future, keep in mind of what other features you wish to extend Vim with. Chances are, it's already in Vim, someone has created a plugin or there is a program for it already. Next, you'll learn about a very important topic in Vim: Vim grammar.
+You also just saw Vim's extensibility in action - the ability to extend search functionality with a plugin and an external program. In the future, keep in mind what other features you wish to extend Vim with. Chances are, it's already in Vim, someone has created a plugin or there is a program for it already. Next, you'll learn about a very important topic in Vim: Vim grammar.
 
 ## Link
 - Prev [Ch02. Buffers, Windows, and Tabs](./ch02_buffers_windows_tabs.md)

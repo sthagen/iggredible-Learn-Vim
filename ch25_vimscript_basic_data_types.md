@@ -105,7 +105,7 @@ However, this will:
 :endif
 ```
 
-Any values other than 0 is truthy, including negative numbers. 100 is truthy. -1 is truthy.
+Any value other than 0 is truthy, including negative numbers. 100 is truthy. -1 is truthy.
 
 ### Number Arithmetic
 
@@ -280,7 +280,7 @@ On the other hand, this is falsy:
 :if "donuts12"
 :  echo "Nope"
 :endif
-" rerturns nothing
+" returns nothing
 ```
 
 Vim coerces "donuts12" into 0, because the first character is not a number.
@@ -473,7 +473,7 @@ To get the length of a list, use `len()`:
 " returns 2
 ```
 
-To prepend  an element to a list, you can use `insert()`:
+To prepend an element to a list, you can use `insert()`:
 
 ```
 :let sweetList = ["chocolate", "strawberry"]

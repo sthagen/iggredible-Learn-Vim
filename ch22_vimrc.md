@@ -109,7 +109,7 @@ Vimrc is a good place for custom functions. You will learn how to write your own
 
 ### Custom Commands
 
-You can create a custom Command-line command  with `command`.
+You can create a custom command-line command with `command`.
 
 To create a basic command `GimmeDate` to display today's date:
 
@@ -202,7 +202,7 @@ The `nnoremap` command used above can be broken down into three parts:
 
 At minimum, you could have used `nmap` instead of `nnoremap` (`nmap <silent> <C-f> :Gfiles<CR>`). However, it is a good practice to use the non-recursive variant to avoid potential infinite loop.
 
-Here's what could happen if you don't map non-recursively. Suppose you want to add a mapping to `B` to add a semi-colon at the end of the line, then go back one WORD (recall that `B` n Vim is a normal-mode navigation key to go backward one WORD).
+Here's what could happen if you don't map non-recursively. Suppose you want to add a mapping to `B` to add a semi-colon at the end of the line, then go back one WORD (recall that `B` in Vim is a normal-mode navigation key to go backward one WORD).
 
 ```
 nmap B A;<esc>B
@@ -211,7 +211,7 @@ nmap B A;<esc>B
 When you press `B`... oh no! Vim adds `;` uncontrollably (interrupt it with `Ctrl-C`). Why did that happen? Because in the mapping `A;<esc>B`, the `B` does not refer to Vim's native `B` function (go back one WORD), but it refers to the mapped function. What you have is actually this:
 
 ```
-A;<esc>A;<esc>A;<esc>A;esc>...
+A;<esc>A;<esc>A;<esc>A;<esc>...
 ```
 
 To solve this problem, you need to add a non-recursive map:
@@ -298,7 +298,7 @@ nnoremap <silent> <C-f> :GFiles<CR>
 nnoremap <Leader>tn :call ToggleNumber()<CR>
 ```
 
-Your vimrc should works as usual, but now it is only four lines long!
+Your vimrc should work as usual, but now it is only four lines long!
 
 With this setup, you easily know where to go. If you need to add more mappings, add them to the `/mappings.vim` file. In the future, you can always add more directories as your vimrc grows. For example, if you need to create a setting for your colorschemes, you can add a `~/.vim/settings/themes.vim`.
 
@@ -408,6 +408,5 @@ vim --clean
 Vimrc is an important component of Vim customization. A good way to start building your vimrc is by reading other people's vimrcs and gradually build it over time. The best vimrc is not the one that developer X uses, but the one that is tailored exactly to fit your thinking framework and editing style.
 
 ## Link
-- Prev [# Multiple File Operations
-](./ch21_multiple_file_operations.md)
+- Prev [Ch21. Multiple File Operations](./ch21_multiple_file_operations.md)
 - Next [Ch23. Vim Packages](./ch23_vim_packages.md)

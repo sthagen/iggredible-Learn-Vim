@@ -1,6 +1,6 @@
 # Ch08. Registers
 
-Learning Vim registers is like learning algebra for the first time. You didn't think you need it until you needed it.
+Learning Vim registers is like learning algebra for the first time. You didn't think you needed it until you needed it.
 
 You've probably used Vim registers when you yanked or deleted a text then pasted it with `p` or `P`. However, did you know that Vim has 10 different types of registers? Used correctly, Vim registers can save you from repetitive typing.
 
@@ -14,7 +14,7 @@ Here are the 10 Vim register types:
 2. The numbered registers (`"0-9`).
 3. The small delete register (`"-`).
 4. The named registers (`"a-z`).
-5. The read-only registers (`":`, `".`,and `"%`).
+5. The read-only registers (`":`, `".`, and `"%`).
 6. The alternate file register (`"#`).
 7. The expression register (`"=`).
 8. The selection registers (`"*` and `"+`).
@@ -188,7 +188,7 @@ Then press `<Enter>`, then `p`. Similarly, to get values from register a while i
 Ctrl-r =@a
 ```
 
-Expression is a vast topic in Vim, so I will only cover the basics here. I will address expressions in more details in later Vimscript chapters.
+Expression is a vast topic in Vim, so I will only cover the basics here. I will address expressions in more detail in later Vimscript chapters.
 
 ## The Selection Registers
 
@@ -198,7 +198,7 @@ If you are on an external program (like Chrome browser) and you copy a block of 
 
 You may wonder if `"*` and `"+` do the same thing, why does Vim have two different registers? Some machines use X11 window system. This system has 3 types of selections: primary, secondary, and clipboard. If your machine uses X11, Vim uses X11's *primary* selection with the `quotestar` (`"*`) register and X11's *clipboard* selection with the `quoteplus` (`"+`) register. This is only applicable if you have `+xterm_clipboard` option available in your Vim build. If your Vim doesn't have `xterm_clipboard`, it's not a big deal. It just means that both `quotestar` and `quoteplus` are interchangeable (mine doesn't either).
 
-I find doing `=*p` or `=+p` (or `"*p` or `"+p`) to be cumbersome. To make Vim to paste copied text from the external program with just `p`, you can add this in your vimrc:
+I find doing `=*p` or `=+p` (or `"*p` or `"+p`) to be cumbersome. To make Vim paste copied text from the external program with just `p`, you can add this in your vimrc:
 
 ```
 set clipboard=unnamed
@@ -222,7 +222,7 @@ To paste your last search (`/` or `?`), you can use the last search pattern regi
 
 To view all your registers, use the `:register` command. To view only registers "a, "1, and "-, use `:register a 1 -`.
 
-There is a plugin called [vim-peekaboo](https://github.com/junegunn/vim-peekaboo) that lets you to peek into the contents of the registers when you hit `"` or `@` in normal mode and `Ctrl-R` in insert mode. I find this plugin very useful because most times, I can't remember the content in my registers. Give it a try!
+There is a plugin called [vim-peekaboo](https://github.com/junegunn/vim-peekaboo) that lets you peek into the contents of the registers when you hit `"` or `@` in normal mode and `Ctrl-R` in insert mode. I find this plugin very useful because most times, I can't remember the content in my registers. Give it a try!
 
 ## Executing a Register
 
@@ -248,7 +248,7 @@ One cool trick to pass `:put` with the black hole register (`"_`). Since the bla
 
 ## Learning Registers the Smart Way
 
-You made it to the end. Congratulations! If you are feeling overwhelmed by the sheer information, you are not alone. When I first started learning about Vim registers, there were way too much information to take at once.
+You made it to the end. Congratulations! If you are feeling overwhelmed by the sheer information, you are not alone. When I first started learning about Vim registers, there was way too much information to take in at once.
 
 I don't think you should memorize all the registers immediately. To become productive, you can start by using only these 3 registers:
 1. The unnamed register (`""`).
@@ -262,5 +262,5 @@ The average human has a limited short-term memory capacity, about 5 - 7 items at
 Vim registers are powerful. Used strategically, it can save you from typing countless repeating texts. Next, let's learn about macros.
 
 ## Link
-- Prev [Ch07. the Dot Command](./ch07_the_dot_command.md)
+- Prev [Ch07. The Dot Command](./ch07_the_dot_command.md)
 - Next [Ch09. Macros](./ch09_macros.md)

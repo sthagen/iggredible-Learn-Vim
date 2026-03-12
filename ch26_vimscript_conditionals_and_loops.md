@@ -471,7 +471,7 @@ finally
 endtry
 ```
 
-The difference between `catch` and `finally` is that `finally` is always run, error or not,  where a catch is only run when your code gets an error.
+The difference between `catch` and `finally` is that `finally` is always run, error or not, whereas `catch` is only run when your code gets an error.
 
 You can catch specific error with `:catch`. According to `:h :catch`:
 

@@ -26,7 +26,7 @@ test ti[tle] two
 test ti[tle] three
 ```
 
-If I press `gt`, the plugin won't capitalize it. I find it inconsistent with the behaviors of `gu`, `gU`, and `g~`. So I decided to work off from that titlecase plugin repo and use that to a titlecase plugin myself that is consistent with `gu`, `gU`, and `g~`!. Again, the vim-titlecase plugin itself is an excellent plugin and worthy to be used on its own (the truth is, maybe deep down I just wanted to write my own Vim plugin. I can't really see the blockwise titlecasing feature to be used that often in real life other than edge cases).
+If I press `gt`, the plugin won't capitalize it. I find it inconsistent with the behaviors of `gu`, `gU`, and `g~`. So I decided to work off from that titlecase plugin repo and use that to create a titlecase plugin myself that is consistent with `gu`, `gU`, and `g~`! Again, the vim-titlecase plugin itself is an excellent plugin and worthy to be used on its own (the truth is, maybe deep down I just wanted to write my own Vim plugin. I can't really see the blockwise titlecasing feature to be used that often in real life other than edge cases).
 
 ### Planning for the Plugin
 
@@ -210,7 +210,7 @@ So exactly how do these two lines work and why is it returning `g@`?
 Let's assume that you have the following map:
 
 ```
-nnoremap <expr> gt ToTitle()`
+nnoremap <expr> gt ToTitle()
 ```
 
 Then you press `gtw` (titlecase the next word). The first time you run `gtw`, Vim calls the `ToTitle()` method. But right now `opfunc` is still blank. You are also not passing any argument to `ToTitle()`, so it will have `a:type` value of `''`. This causes the conditional expression to check the argument `a:type`, `if a:type ==# ''`, to be truthy. Inside, you assign `opfunc` to the `ToTitle` function with `set opfunc=ToTitle`. Now `opfunc` is assigned to `ToTitle`. Finally, after you assigned `opfunc` to the `ToTitle` function, you return `g@`. I will explain why it returns `g@` below.
@@ -297,7 +297,7 @@ let l:cb_save = &clipboard
 let l:visual_marks_save = [getpos("'<"), getpos("'>")]
 ```
 
-These lines preserve various current states into temporary variables. Later in this you will use visual modes, marks, and registers. Doing these will tamper with the a few states. Since you don't want to revise the history, you need to save them into temporary variables so you can restore the states later.
+These lines preserve various current states into temporary variables. Later in this you will use visual modes, marks, and registers. Doing these will tamper with a few states. Since you don't want to revise the history, you need to save them into temporary variables so you can restore the states later.
 
 ## Capitalizing the Selections
 
@@ -657,7 +657,7 @@ panCake for dinner
 
 ## Handling Line and Char Operations
 
-You are not done yet. You've only addressed the edge case when you run `gt` on block texts. You still need to handle the 'line' and 'char' operations. Let's look at the `else` code to see how tthis is done.
+You are not done yet. You've only addressed the edge case when you run `gt` on block texts. You still need to handle the 'line' and 'char' operations. Let's look at the `else` code to see how this is done.
 
 Here are the codes:
 
@@ -814,7 +814,7 @@ endfunction
 
 This function was created to handle an edge case if you have a sentence that starts with an excluded word, like "an apple a day keeps the doctor away". Based on English language's capitalization rules, all first words in a sentence, regardless if it is a special word or not, must be capitalized. With your `substitute()` command alone, the "an" in your sentence would be lowercased. You need to force the first character to be uppercased.
 
-In this `capitalizeFirstWord` function, the `a:string` argument is not an individual word like `a:string` inside the `capitalize` function, but instead the whole text. So if you have "pancake for breakfast", `a:string`'s value is "pancake for breakfast".it only runs `capitalizeFirstWord` once for the whole text. 
+In this `capitalizeFirstWord` function, the `a:string` argument is not an individual word like `a:string` inside the `capitalize` function, but instead the whole text. So if you have "pancake for breakfast", `a:string`'s value is "pancake for breakfast". It only runs `capitalizeFirstWord` once for the whole text. 
 
 One scenario you need to watch out for is if you have a multi-line string like `"an apple a day\nkeeps the doctor away"`. You want to uppercase the first character of all lines. If you don't have newlines, then simply uppercase the first character.
 

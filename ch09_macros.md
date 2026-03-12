@@ -1,6 +1,6 @@
 # Ch09. Macros
 
-When editing files, you may find yourself repeating the same actions. Wouldn't it be nice if you can do those actions once and replay them whenever you need it? With Vim macros, you can record actions and store them inside Vim registers to be executed whenever you need it.
+When editing files, you may find yourself repeating the same actions. Wouldn't it be nice if you could do those actions once and replay them whenever you need it? With Vim macros, you can record actions and store them inside Vim registers to be executed whenever you need it.
 
 In this chapter, you will learn how to use macros to automate mundane tasks (plus it looks cool to watch your file edit itself).
 
@@ -169,7 +169,7 @@ Now when you execute `@a`, it not only toggles the case of the next WORD, it als
 
 What if you need to add new actions in the middle of a macro?
 
-Assume that you have a macro that toggles the first actual word and adding a period at the end of the line, `0W~A.<Esc>` in register a. Suppose that between uppercasing the first word and adding a period at the end of the line, you need to add the word "deep fried" right before the word "donut" *(because the only thing better than regular donuts are deep fried donuts)*.
+Assume that you have a macro that toggles the first actual word and adds a period at the end of the line, `0W~A.<Esc>` in register a. Suppose that between uppercasing the first word and adding a period at the end of the line, you need to add the word "deep fried" right before the word "donut" *(because the only thing better than regular donuts are deep fried donuts)*.
 
 I will reuse the text from earlier section:
 ```

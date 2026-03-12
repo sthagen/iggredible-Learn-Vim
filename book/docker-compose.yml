@@ -1,0 +1,7 @@
+services:
+  book:
+    build:
+      context: ..
+      dockerfile: book/Dockerfile
+    ports:
+      - "8080:80"

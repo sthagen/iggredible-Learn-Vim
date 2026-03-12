@@ -35,7 +35,7 @@ Ctrl-C    Like Ctrl-[ and <Esc>, but does not check for abbreviation
 
 I find `<Esc>` key too far to reach, so I map my computer `<Caps-Lock>` to behave like `<Esc>`. If you search for Bill Joy's ADM-3A keyboard (Vi creator), you will see that the `<Esc>` key is not located on far top left like modern keyboards, but to the left of `q` key. This is why I think it makes sense to map  `<Caps lock>` to `<Esc>`.
 
-Another common convention I have seen Vim users do is mapping `<Esc>` to `jj` or `jk` in insert mode. If you prefer this option add this one of those lines (or both) in your vimrc file.
+Another common convention I have seen Vim users do is mapping `<Esc>` to `jj` or `jk` in insert mode. If you prefer this option, add one of those lines (or both) in your vimrc file.
 
 ```
 inoremap jj <Esc>
@@ -94,7 +94,7 @@ Ctrl-X Ctrl-E    Scroll down
 
 ## Autocompletion
 
-As mentioned above, if you press `Ctrl-X` from insert mode, Vim will enter a sub-mode. You can do text autocompletion while in this insert mode sub-mode. Although it is not as good as [intellisense](https://code.visualstudio.com/docs/editor/intellisense) or any other Language Server Protocol (LSP), but for something that is available right out of the box, it is a very capable feature.
+As mentioned above, if you press `Ctrl-X` from insert mode, Vim will enter a sub-mode. You can do text autocompletion while in this insert mode sub-mode. Although it is not as good as [intellisense](https://code.visualstudio.com/docs/editor/intellisense) or any other Language Server Protocol (LSP), for something that is available right out of the box, it is a very capable feature.
 
 Here are some useful autocomplete commands to get started:
 
@@ -162,4 +162,4 @@ When you need to insert a text, first ask yourself if that text already exists. 
 
 ## Link
 - Prev [Ch05. Moving in a File](./ch05_moving_in_file.md)
-- Next [Ch07. the Dot Command](./ch07_the_dot_command.md)
+- Next [Ch07. The Dot Command](./ch07_the_dot_command.md)

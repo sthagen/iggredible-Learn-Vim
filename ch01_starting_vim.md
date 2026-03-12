@@ -6,9 +6,9 @@ In this chapter, you will learn different ways to start Vim from the terminal. I
 
 I won't go through the detailed instructions on how to install Vim on a specific machine. The good news is that most Unix-based computers should come with Vim installed already. If not, most distros should have some instructions on how to install Vim.
 
-To download more information about the Vim installation process, check out the official download website or the official github repository:
+To download more information about the Vim installation process, check out the official download website or the official GitHub repository:
 - [Vim website](https://www.vim.org/download.php)
-- [Vim github](https://github.com/vim/vim)
+- [Vim GitHub](https://github.com/vim/vim)
 
 ## The Vim Command
 
@@ -86,7 +86,7 @@ Vim opens `hello1.txt`, `hello2.txt`, and `hello3.txt` in separate buffers. You 
 
 ## Arguments
 
-You can pass the `vim` terminal command with different flags and options.
+You can pass different flags and options to the `vim` terminal command.
 
 To check the current Vim version, run:
 

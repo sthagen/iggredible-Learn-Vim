@@ -233,7 +233,7 @@ In this case, the file name is `tasty.vim` and the function name is (technically
 
 To invoke a function, you need the `call` command. Let's call that function with `:call tasty#donut()`.
 
-The first time you call the function, you should see *both* echo messages ("tasty.vim global" and "tasty#donut"). The subsequent calls to` tasty#donut` function will only display "testy#donut" echo.
+The first time you call the function, you should see *both* echo messages ("tasty.vim global" and "tasty#donut"). The subsequent calls to` tasty#donut` function will only display "tasty#donut" echo.
 
 When you open a file in Vim, unlike the previous runtime paths, autoload scripts aren't loaded automatically. Only when you explicitly call `tasty#donut()`, Vim looks for the `tasty.vim` file and loads everything inside it, including the `tasty#donut()` function. Autoload is the perfect mechanism for functions that use extensive resources but you don't use often.
 
@@ -253,7 +253,7 @@ The structure should look familiar. It contains many runtime paths you learned i
 
 Recall in Chapter 21, you learned that when you open Vim, it looks for a vimrc files in seven different locations. I said that the last location Vim checks is `$VIMRUNTIME/defaults.vim`. If Vim fails to find any user vimrc files, Vim uses a `defaults.vim` as vimrc.
 
-Have you ever tried running Vim without syntax plugin like vim-polyglot and yet your file is still syntatically highlighted? That is because when Vim fails to find a syntax file from the runtime path, Vim looks for a syntax file from `$VIMRUNTIME` syntax directory.
+Have you ever tried running Vim without a syntax plugin like vim-polyglot and yet your file is still syntactically highlighted? That is because when Vim fails to find a syntax file from the runtime path, Vim looks for a syntax file from `$VIMRUNTIME` syntax directory.
 
 To learn more, check out `:h $VIMRUNTIME`.
 

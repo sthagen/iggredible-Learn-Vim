@@ -56,7 +56,7 @@ If you need to transfer the text from the other buffer (orange juice, `file2.txt
 
 `:diffput` *puts out* the text from the current buffer to another buffer. `:diffget` *gets* the text from another buffer to the current buffer.
 
-If you have multiple buffers, you can run `:diffput fileN.txt` and `:diffget fileN.txt` to target the the fileN buffer.
+If you have multiple buffers, you can run `:diffput fileN.txt` and `:diffget fileN.txt` to target the fileN buffer.
 
 ## Vim As a Merge Tool
 
@@ -247,7 +247,7 @@ There are many Vim plugins for git support. Below is a list of some of the popul
 - [vim-twiggy](https://github.com/sodapopcan/vim-twiggy)
 - [rhubarb](https://github.com/tpope/vim-rhubarb)
 
-One of the most popular ones is vim-fugitive. For the remaining of the chapter, I will go over a several git workflow using this plugin.
+One of the most popular ones is vim-fugitive. For the remaining of the chapter, I will go over several git workflows using this plugin.
 
 ## Vim-fugitive
 
@@ -308,7 +308,7 @@ If you are inside one of vim-fugitive's "special mode" (for example, inside `:Gi
 
 ## Learn Vim and Git the Smart Way
 
-You may find vim-fugitive to be a good compliment to your workflow (or not). Regardless, I would strongly encourage you to check out all the plugins listed above. There are probably others I didn't list. Go try them out.
+You may find vim-fugitive to be a good complement to your workflow (or not). Regardless, I would strongly encourage you to check out all the plugins listed above. There are probably others I didn't list. Go try them out.
 
 One obvious way to get better with Vim-git integration is to read more about git. Git, on its own, is a vast topic and I am only showing a fraction of it. With that, let's *git going* (pardon the pun) and talk about how to use Vim to compile your code!
 

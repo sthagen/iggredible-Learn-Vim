@@ -34,7 +34,7 @@ Exit Vim. This time, open two new files:
 vim file1.js file2.js
 ```
 
-Vim is currently displaying the `file1.js` buffer, but it actually creates two buffers: the `file1.js` buffer and the `file2.js` buffer. Run `:buffers` to see all the buffers (alternatively, you can use `:ls` or `:files` too). You should see *both* `file1.js` and `file2.js` listed. Running `vim file1 file2 file3 ... filen` creates `n` buffers. Each time you open a new file, Vim create a new buffer for that file.
+Vim is currently displaying the `file1.js` buffer, but it actually creates two buffers: the `file1.js` buffer and the `file2.js` buffer. Run `:buffers` to see all the buffers (alternatively, you can use `:ls` or `:files` too). You should see *both* `file1.js` and `file2.js` listed. Running `vim file1 file2 file3 ... filen` creates `n` buffers. Each time you open a new file, Vim creates a new buffer for that file.
 
 There are several ways you can traverse buffers:
 - `:bnext` to go to the next buffer (`:bprevious` to go to the previous buffer).
@@ -45,7 +45,7 @@ There are several ways you can traverse buffers:
 
 Once Vim creates a buffer, it will remain in your buffer list. To remove the current buffer, you can type `:bdelete`. This command also accepts a buffer number as a parameter (e.g., `:bdelete 3` to delete buffer #3) or a filename (`:bdelete` then use `<Tab>` to autocomplete).
 
-For me, the hardest part of learning about buffers was visualizing how they worked, because my mind was so used to the windows a mainstream text editor I had been using. Buffers can be analogized to a deck of playing cards. If I have 2 buffers, I have a stack of 2 cards. The card on top is the only card I see, but I know there is another card below it. If I see `file1.js` buffer displayed then the `file1.js` card is on the top of the deck. I can't see the other card, `file2.js` here, but it's there. If I switch buffers to `file2.js`, that `file2.js` card is now on the top of the deck and `file1.js` card is below it.
+For me, the hardest part of learning about buffers was visualizing how they worked, because my mind was so used to the windows of a mainstream text editor I had been using. Buffers can be analogized to a deck of playing cards. If I have 2 buffers, I have a stack of 2 cards. The card on top is the only card I see, but I know there is another card below it. If I see `file1.js` buffer displayed then the `file1.js` card is on the top of the deck. I can't see the other card, `file2.js` here, but it's there. If I switch buffers to `file2.js`, that `file2.js` card is now on the top of the deck and `file1.js` card is below it.
 
 If you haven't used Vim before, this is a new concept. Take your time to understand it.
 
@@ -164,7 +164,7 @@ Below is a list of useful tab navigations:
 :tabfirst           Go to first tab
 ```
 
-You can also run `gt` to go to next tab page (you can go to previous tab with `gT`). You can pass count as argument to `gt`, where count is tab number; for example, to go to the third tab, do `3gt`.
+You can also run `gt` to go to next tab page (you can go to previous tab with `gT`). You can pass count as argument to `gt`, where count is the tab number; for example, to go to the third tab, do `3gt`.
 
 One advantage of having multiple tabs is you can have different window arrangements in different tabs. Maybe you want your first tab to have 3 vertical windows, and your second tab to have a layout consisting of horizontal and vertical windows mixed together. Tab is the perfect tool for this job!
 

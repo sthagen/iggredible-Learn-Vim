@@ -1,0 +1,13 @@
+[book]
+title = "Learn Vim (the Smart Way)"
+authors = ["Igor Irianto"]
+language = "en"
+src = "src"
+
+[build]
+build-dir = "output"
+
+[output.html]
+default-theme = "light"
+preferred-dark-theme = "ayu"
+git-repository-url = "https://github.com/iggredible/learn-vim"

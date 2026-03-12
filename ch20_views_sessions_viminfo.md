@@ -1,8 +1,8 @@
 # Ch20. Views, Sessions, and Viminfo
 
-After you worked on a project for a while, you may find the project to gradually take shape with its own settings, folds, buffers, layouts, etc. It's like decorating your apartment after living in it for a while. The problem is, when you close Vim, you lose those changes. Wouldn't it be nice if you can keep those changes so the next time you open Vim, it looks just like you had never left?
+After you worked on a project for a while, you may find the project to gradually take shape with its own settings, folds, buffers, layouts, etc. It's like decorating your apartment after living in it for a while. The problem is, when you close Vim, you lose those changes. Wouldn't it be nice if you could keep those changes so the next time you open Vim, it looks just like you had never left?
 
-In this chapter, you will learn how use View, Session, and Viminfo to preserve a "snapshot" of your projects.
+In this chapter, you will learn how to use View, Session, and Viminfo to preserve a "snapshot" of your projects.
 
 ## View
 
@@ -387,11 +387,10 @@ There are other options that you can pass. To learn more, check out `:h 'viminfo
 
 ## Using Views, Sessions, and Viminfo the Smart Way
 
-Vim has View, Session, and Viminfo to take different level of your Vim environment snapshots. For micro projects, use Views. For larger projects, use Sessions. You should take your time to check out all the options that View, Session, and Viminfo offers.
+Vim has View, Session, and Viminfo to take different levels of your Vim environment snapshots. For micro projects, use Views. For larger projects, use Sessions. You should take your time to check out all the options that View, Session, and Viminfo offers.
 
 Create your own View, Session, and Viminfo for your own editing style. If you ever need to use Vim outside of your computer, you can just load your settings and you will immediately feel at home!
 
 ## Link
 - Prev [Ch19. Compile](./ch19_compile.md)
-- Next [# Multiple File Operations
-](./ch21_multiple_file_operations.md)
+- Next [Ch21. Multiple File Operations](./ch21_multiple_file_operations.md)

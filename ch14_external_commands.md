@@ -1,8 +1,8 @@
 # Ch14. External Commands
 
-Inside the Unix system, you will find many small, hyper-specialized commands that does one thing (and does it well). You can chain these commands to work together to solve a complex problem. Wouldn't it be great if you can use these commands from inside Vim?
+Inside the Unix system, you will find many small, hyper-specialized commands that do one thing (and do it well). You can chain these commands to work together to solve a complex problem. Wouldn't it be great if you could use these commands from inside Vim?
 
-Definitely. In this chapter, you will learn how extend Vim to work seamlessly with external commands.
+Definitely. In this chapter, you will learn how to extend Vim to work seamlessly with external commands.
 
 ## The Bang Command
 
@@ -216,5 +216,5 @@ Vim is not an IDE. It is a lightweight modal editor that is highly extensible by
 The bang command is as useful as how many external commands you know. Don't worry if your external command knowledge is limited. I still have a lot to learn too. Take this as a motivation for continuous learning. Whenever you need to modify a text, look if there is an external command that can solve your problem. Don't worry about mastering everything, just learn the ones you need to complete the current task.
 
 ## Link
-- Prev [Ch13. the Global Command](./ch13_the_global_command.md)
+- Prev [Ch13. The Global Command](./ch13_the_global_command.md)
 - Next [Ch15. Command-line Mode](./ch15_command-line_mode.md)

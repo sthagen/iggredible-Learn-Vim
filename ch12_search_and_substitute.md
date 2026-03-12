@@ -6,7 +6,7 @@ As a side note, in this chapter, I will use `/` when talking about search. Every
 
 ## Smart Case Sensitivity
 
-It can be tricky trying to match the case of the search term. If you are searching for the text "Learn Vim", you can easily mistype the case of one letter and get a false search result. Wouldn't it be easier and safer if you can match any case? This is where the option `ignorecase` shines. Just add `set ignorecase` in your vimrc and all your search terms become case insensitive. Now you don't have to do `/Learn Vim` anymore, `/learn vim` will work.
+It can be tricky trying to match the case of the search term. If you are searching for the text "Learn Vim", you can easily mistype the case of one letter and get a false search result. Wouldn't it be easier and safer if you could match any case? This is where the option `ignorecase` shines. Just add `set ignorecase` in your vimrc and all your search terms become case insensitive. Now you don't have to do `/Learn Vim` anymore, `/learn vim` will work.
 
 However, there are times when you need to search for a case specific phrase. One way to do that is to turn off `ignorecase` option by running `set noignorecase`, but that is a lot of work to turn on and off each time you need to search for a case sensitive phrase.
 
@@ -58,7 +58,7 @@ You can repeat the previous search with `//`. If you have just searched for `/he
 
 What if you want to quickly recall *n* last search term? You can quickly traverse the search history by first pressing `/`, then press `up`/`down` arrow keys (or `Ctrl-N`/`Ctrl-P`) until you find the search term you need. To see all your search history, you can run `:history /`.
 
-When you reach the end of a file while searching, Vim throws an error: `"Search hit the BOTTOM without match for: {your-search}"`. Sometimes this can be a good safeguard from oversearching, but other times you want to cycle the search back to the top again. You can use the `set wrapscan` option to make Vim to search back at the top of the file when you reach the end of the file. To turn this feature off, do `set nowrapscan`.
+When you reach the end of a file while searching, Vim throws an error: `"Search hit the BOTTOM without match for: {your-search}"`. Sometimes this can be a good safeguard from oversearching, but other times you want to cycle the search back to the top again. You can use the `set wrapscan` option to make Vim search back at the top of the file when you reach the end of the file. To turn this feature off, do `set nowrapscan`.
 
 ## Searching for Alternative Words
 
@@ -266,7 +266,7 @@ Here are some range variations you can pass:
 - `:1,s/let/const/` - if nothing is given after the comma, it also represents the current line. Substitute from line 1 to current line.
 - `:3s/let/const/` - if only one value is given as range (no comma), it does substitution on that line only.
 
-In Vim, `%` usually means the entire file. If you run `:%s/let/const/`, it will do substitution on all lines. Keep in mind of this range syntax. Many command-line commands that you will learn in the upcoming chapters will follow this form.
+In Vim, `%` usually means the entire file. If you run `:%s/let/const/`, it will do substitution on all lines. Keep in mind this range syntax. Many command-line commands that you will learn in the upcoming chapters will follow this form.
 
 ## Pattern Matching
 
@@ -501,7 +501,7 @@ The result:
 Vim Is The Greatest Text Editor In The Whole Galaxy
 ```
 
-Here is the breakdowns:
+Here is the breakdown:
 - `:s` substitutes the current line.
 - `\<.` is comprised of two parts: `\<` to match the start of a word and `.` to match any character. `\<` operator makes the following character to be the first character of a word. Since `.` is the next character, it will match the first character of any word.
 - `\U&`  uppercases the subsequent symbol, `&`. Recall that `&` (or `\0`) represents the whole match. It matches the first character of any word.
@@ -537,7 +537,7 @@ bonjour vim
 
 Here is the breakdown:
 - `%s` runs the substitute command on each line in a file.
-- `(hello|hola)` matches *either* "hello" or "hola" and consider it as a group.
+- `(hello|hola)` matches *either* "hello" or "hola" and considers it as a group.
 - `vim` is the literal word "vim".
 - `\1` is the first group, which is either the text "hello" or "hola".
 - `friend` is the literal word "friend".
@@ -712,7 +712,7 @@ The breakdown:
 
 ## Learning Search and Substitution the Smart Way
 
-The ability to do search well is a necessary skill in editing. Mastering the search lets you to utilize the flexibility of regular expressions to search for any pattern in a file. Take your time to learn these. To get better with regular expression you need to be actively using regular expressions. I once read a book about regular expression without actually doing it and I forgot almost everything I read afterwards. Active coding is the best way to master any skill.
+The ability to do search well is a necessary skill in editing. Mastering the search lets you utilize the flexibility of regular expressions to search for any pattern in a file. Take your time to learn these. To get better with regular expression you need to be actively using regular expressions. I once read a book about regular expression without actually doing it and I forgot almost everything I read afterwards. Active coding is the best way to master any skill.
 
 A good way to improve your pattern matching skill is whenever you need to search for a pattern (like "hello 123"), instead of querying for the literal search term (`/hello 123`), try to come up with a pattern for it (something like `/\v(\l+) (\d+)`). Many of these regular expression concepts are also applicable in general programming, not only when using Vim.
 
@@ -720,4 +720,4 @@ Now that you learned about advanced search and substitution in Vim, let's learn 
 
 ## Link
 - Prev [Ch11. Visual Mode](./ch11_visual_mode.md)
-- Next [Ch13. the Global Command](./ch13_the_global_command.md)
+- Next [Ch13. The Global Command](./ch13_the_global_command.md)

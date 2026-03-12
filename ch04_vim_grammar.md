@@ -154,7 +154,7 @@ To learn more, check out `:h text-objects`.
 
 ## Composability and Grammar
 
-Vim grammar is subset of Vim's composability feature. Let's discuss composability in Vim and why this is a great feature to have in a text editor.
+Vim grammar is a subset of Vim's composability feature. Let's discuss composability in Vim and why this is a great feature to have in a text editor.
 
 Composability means having a set of general commands that can be combined (composed) to perform more complex commands. Just like in programming where you can create more complex abstractions from simpler abstractions, in Vim you can execute complex commands from simpler commands. Vim grammar is the manifestation of Vim's composable nature.
 
@@ -195,7 +195,7 @@ Great! The external command operator can also use pipe (`|`).
 
 This is the power of Vim's composability. The more you know your operators, motions, and terminal commands, your ability to compose complex actions is *multiplied*.
 
-Suppose you only know four motions, `w, $, }, G` and only one operator, `d`. You can do 8 actions: *move* 4 different ways (`w, $, }, G`) and *delete* 4 different targets (`dw, d$, d}, dG`). Then one day you learn about the uppercase (`gU`) operator. You have added not just one new ability to your Vim tool belt, but *four*: `gUw, gU$, gU}, gUG`. This makes at 12 tools in your Vim tool belt. Each new knowledge is a multiplier to your current abilities. If you know 10 motions and 5 operators, you have 60 moves (50 operations + 10 motions) in your arsenal. Vim has a line-number motion (`nG`) that gives you `n` motions, where `n` is how many lines you have in your file (to go to line 5, run `5G`). The search motion (`/`) practically gives you near unlimited number motions because you can search for anything. External command operator (`!`) gives you as many filtering tools as the number of terminal commands you know. Using a composable tool like Vim, everything you know can be linked together to do operations with increasing complexity. The more you know, the more powerful you become.
+Suppose you only know four motions, `w, $, }, G` and only one operator, `d`. You can do 8 actions: *move* 4 different ways (`w, $, }, G`) and *delete* 4 different targets (`dw, d$, d}, dG`). Then one day you learn about the uppercase (`gU`) operator. You have added not just one new ability to your Vim tool belt, but *four*: `gUw, gU$, gU}, gUG`. That makes 12 tools in your Vim tool belt. Each new knowledge is a multiplier to your current abilities. If you know 10 motions and 5 operators, you have 60 moves (50 operations + 10 motions) in your arsenal. Vim has a line-number motion (`nG`) that gives you `n` motions, where `n` is how many lines you have in your file (to go to line 5, run `5G`). The search motion (`/`) practically gives you near unlimited number of motions because you can search for anything. External command operator (`!`) gives you as many filtering tools as the number of terminal commands you know. Using a composable tool like Vim, everything you know can be linked together to do operations with increasing complexity. The more you know, the more powerful you become.
 
 This composable behavior echoes Unix philosophy: *do one thing well*. An operator has one job: do Y. A motion has one job: go to X. By combining an operator with a motion, you predictably get YX: do Y on X.
 

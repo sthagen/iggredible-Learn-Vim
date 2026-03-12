@@ -1,6 +1,6 @@
 # Ch10. Undo
 
-We all make all sorts of typing mistakes. That's why undo is an essential feature in any modern software. Vim's undo system is not only capable of undoing and redoing simple mistakes, but also accessing different text states, giving you control to all the texts you have ever typed. In this chapter, you will learn how to undo, redo, navigate an undo branch, persist undo, and travel across time.
+We all make all sorts of typing mistakes. That's why undo is an essential feature in any modern software. Vim's undo system is not only capable of undoing and redoing simple mistakes, but also accessing different text states, giving you control over all the texts you have ever typed. In this chapter, you will learn how to undo, redo, navigate an undo branch, persist undo, and travel across time.
 
 ## Undo, Redo, and UNDO
 
@@ -167,7 +167,7 @@ one
 four
 ```
 
-In Vim, every time you press `u` and then make a different change, Vim stores the previous state's text by creating an "undo branch". In this example, after you typed "two", then pressed `u`, then typed "three", you created an leaf branch that stores the state containing the text "two". At that moment, the undo tree contained at least two leaf nodes: the main node containing the text "three" (most recent) and the undo branch node containing the text "two". If you had done another undo and typed the text "four", you would have at three nodes: a main node containing the text "four" and two nodes containing the texts "three" and "two".
+In Vim, every time you press `u` and then make a different change, Vim stores the previous state's text by creating an "undo branch". In this example, after you typed "two", then pressed `u`, then typed "three", you created a leaf branch that stores the state containing the text "two". At that moment, the undo tree contained at least two leaf nodes: the main node containing the text "three" (most recent) and the undo branch node containing the text "two". If you had done another undo and typed the text "four", you would have at least three nodes: a main node containing the text "four" and two nodes containing the texts "three" and "two".
 
 To traverse each undo tree nodes, you can use `g+` to go to a newer state and `g-` to go to an older state. The difference between `u`, `Ctrl-R`, `g+`, and `g-` is that both `u` and `Ctrl-R` traverse only the *main* nodes in undo tree while `g+` and `g-` traverse *all* nodes in the undo tree.
 
@@ -272,7 +272,7 @@ The same set of arguments work with `:earlier` counterpart: `:later`.
 
 ## Learn Undo the Smart Way
 
-`u` and `Ctrl-R` are two indispensable Vim commands for correcting mistakes. Learn them first. Next, learn how to use `:earlier` and `:later` using the time arguments first. After that, take your time to understand the undo tree. The [vim-mundo](https://github.com/simnalamburt/vim-mundo) plugin helped me a lot. Type along the texts in this chapter and check the undo tree as you make each change. Once you grasp it, you will never see undo system the same way again.
+`u` and `Ctrl-R` are two indispensable Vim commands for correcting mistakes. Learn them first. Next, learn how to use `:earlier` and `:later` using the time arguments first. After that, take your time to understand the undo tree. The [vim-mundo](https://github.com/simnalamburt/vim-mundo) plugin helped me a lot. Type along the texts in this chapter and check the undo tree as you make each change. Once you grasp it, you will never see the undo system the same way again.
 
 Prior to this chapter, you learned how to find any text in a project space, with undo, you can now find any text in a time dimension. You are now able to search for any text by its location and time written. You have achieved Vim-omnipresence.
 

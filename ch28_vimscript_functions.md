@@ -362,7 +362,7 @@ echo meals.second_breakfast()
 
 With `dict` keyword, the key variable `self` refers to the dictionary where the function is stored (in this case, the `meals` dictionary). The expression `self.breakfast` is equal to `meals.breakfast`.
 
-An alternative way to add a function into a dictionary object to use a namespace.
+An alternative way to add a function into a dictionary object is to use a namespace.
 
 ```
 function! meals.second_lunch()
@@ -429,7 +429,7 @@ echo Tasty()
 " returns "tasty"
 ```
 
-You can call a function from insisde a lambda expression:
+You can call a function from inside a lambda expression:
 
 ```
 function! Lunch(item)

@@ -30,7 +30,7 @@ noremap <Right> <NOP>
 
 There are also plugins to help break this bad habit. One of them is [vim-hardtime](https://github.com/takac/vim-hardtime). To my surprise, it took me less than a week to get used to `hjkl`.
 
-If you wonder why Vim uses `hjkl` to move, this is because Lear-Siegler ADM-3A terminal where Bill Joy wrote Vi, didn't have arrow keys and used `hjkl` as left/down/up/right.*
+If you wonder why Vim uses `hjkl` to move, this is because Lear-Siegler ADM-3A terminal where Bill Joy wrote Vi, didn't have arrow keys and used `hjkl` as left/down/up/right.
 
 ## Relative Numbering
 
@@ -96,7 +96,7 @@ When editing, you often need to navigate horizontally in a line. To jump to the 
 ^     Go to the first nonblank char in the current line
 g_    Go to the last non-blank char in the current line
 $     Go to the last char in the current line
-n|    Go the column n in the current line
+n|    Go to the column n in the current line
 ```
 
 You can do current line search with `f` and `t`. The difference between `f` and `t` is that `f` takes you to the first letter of the match and `t` takes you till (right before) the first letter of the match. So if you want to search for "h" and land on "h", use `fh`. If you want to search for first "h" and land right before the match, use `th`. If you want to go to the *next* occurrence of the last current line search, use `;`. To go to the previous occurrence of the last current line match, use `,`.
@@ -141,7 +141,7 @@ There is an empty line above me.
 
 By the way, if you're having a problem with Vim not counting a sentence for phrases separated by `.` followed by a single line, you might be in `'compatible'` mode. Add `set nocompatible` into vimrc. In Vi, a sentence is a `.` followed by **two** spaces. You should have `nocompatible` set at all times.
 
-Let's talk what a paragraph is. A paragraph begins after each empty line and also at each set of a paragraph macro specified by the pairs of characters in paragraphs option.
+Let's talk about what a paragraph is. A paragraph begins after each empty line and also at each set of a paragraph macro specified by the pairs of characters in paragraphs option.
 
 ```
 {    Jump to the previous paragraph
@@ -155,7 +155,7 @@ Let's look at this example. Try navigating around with `}` and `{` (also, play a
 ```
 Hello. How are you? I am great, thanks!
 Vim is awesome.
-It may not easy to learn it at first...- but we are in this together. Good luck!
+It may not be easy to learn it at first...- but we are in this together. Good luck!
 
 Hello again.
 
@@ -167,7 +167,7 @@ Check out `:h sentence` and `:h paragraph` to learn more.
 
 ## Match Navigation
 
-Programmers write and edit codes. Codes typically use parentheses, braces, and brackets. You can easily get lost in them. If you're inside one, you can jump to the other pair (if it exists) with `%`. You can also use this to find out whether you have matching parentheses, braces, and brackets.
+Programmers write and edit code. Code typically uses parentheses, braces, and brackets. You can easily get lost in them. If you're inside one, you can jump to the other pair (if it exists) with `%`. You can also use this to find out whether you have matching parentheses, braces, and brackets.
 
 ```
 %    Navigate to another match, usually works for (), [], {}
@@ -310,7 +310,7 @@ There are more marks than the ones listed above. I won't cover them here because
 
 In Vim, you can "jump" to a different file or different part of a file with some motions. Not all motions count as a jump, though. Going down with `j` does not count as a jump. Going to line 10 with `10G` counts as a jump.
 
-Here are the commands Vim consider as "jump" commands:
+Here are the commands Vim considers as "jump" commands:
 
 ```
 '       Go to the marked line
@@ -325,7 +325,7 @@ N       Repeat the last search, opposite direction
 )       Go to the next sentence
 {       Go to the last paragraph
 }       Go to the next paragraph
-L       Go to the the last line of displayed window
+L       Go to the last line of displayed window
 M       Go to the middle line of displayed window
 H       Go to the top line of displayed window
 [[      Go to the previous section
