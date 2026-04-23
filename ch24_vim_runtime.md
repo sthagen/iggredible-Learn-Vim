@@ -162,7 +162,7 @@ Vim has a colors runtime path (`~/.vim/colors/`) to store color schemes. Any fil
 
 If you have a `~/.vim/colors/beautifulprettycolors.vim` file, when you run `:color` and press Tab, you will see `beautifulprettycolors` as one of the color options. If you prefer to add your own color scheme, this is the place to go.
 
-If you want to check out the color schemes other people made, a good place to visit is [vimcolors](https://vimcolors.com/).
+If you want to check out the color schemes other people made, a good place to visit is [vimcolorsschemes](https://vimcolorschemes.com/).
 
 ## Syntax Highlighting
 
