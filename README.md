@@ -20,7 +20,9 @@ Then open [http://localhost:8080](http://localhost:8080).
 
 ## I Want More Vim Tips!
 
-Follow [@learnvim](https://twitter.com/learnvim) for updates, Vim tips, etc.
+I sometimes blog about Vim on my personal site, [irian.to](https://irian.to/).
+
+~~Follow [@learnvim](https://twitter.com/learnvim) for updates, Vim tips, etc.~~
 
 ## Support This Project
 
